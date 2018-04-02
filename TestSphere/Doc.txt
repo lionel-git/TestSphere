@@ -30,3 +30,32 @@ dM est tangent a la sphere
 
 L'element des surface est
 dS = r^2.cosφ
+
+φ dans [-π/2, π/2[
+
+la probabilite de tirer φ doit etre proportionnelle a cosφ
+
+la proba cumulee est
+
+P1(φ)=int (-π/2,φ) cosw.dw
+
+P1(φ)=[-π/2,φ] [sinw] = sin(φ)+1
+Normalise:
+P(φ)=(1+sin(φ))/2,  φ dans [-π/2, π/2[
+
+on tire U uniforme dans [0,1]
+P(φ)=U
+sin(φ) = 2*U-1 dans [-1,+1]
+V=2*U-1 uniforme dans [-1,+1]
+φ = arcsin(V) dans [-π/2, π/2[
+sin(φ)=V
+
+donc
+M(θ,φ)
+x = r.cosθ.cosφ
+y = r.sinθ.cosφ
+z = r.sinφ
+
+x = r.cosθ.sqrt(1-V^2)
+y = r.sinθ.sqrt(1-V^2)
+z = r.V
