@@ -1,0 +1,32 @@
+﻿
+Corrdonnées spheriques:
+
+M(θ,φ)
+x = r.cosθ.cosφ
+y = r.sinθ.cosφ
+z = r.sinφ
+
+x^2+y^2+z^2 = r^2
+
+θ dans [0, 2π[
+φ dans [-π/2, π/2[
+
+M(θ,φ) se balade sur la sphere
+
+dM est tangent a la sphere
+δM/δθ =
+| -r.sinθ.cosφ
+| +r.cosθ.cosφ
+| 0
+
+δM/δφ =
+| -r.cosθ.sinφ
+| -r.sinθ.sinφ
+| r.cosφ
+
+δM/δθ.δM/δφ = 0
+
+|δM/δθ|^2.|δM/δφ|^2 = r^4 . cosφ^2
+
+L'element des surface est
+dS = r^2.cosφ
