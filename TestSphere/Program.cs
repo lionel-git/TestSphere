@@ -15,20 +15,25 @@ namespace TestSphere
             var O = new P3D(0, 0, 0);
 
             var rs = new RandomSphere();
-            var A = rs.GenPoint();
-            var B = rs.GenPoint();
-            var C = rs.GenPoint();
-            var D = rs.GenPoint();
+            var p = new P3D[4];
 
-            // Centre dans tetrahedre (A, B, C, D) ?
-            var AB = B - A;
-            var AC = C - A;
-            var AD = D - A;
+            int N = 100000000;
+            int nbIn = 0;
+            for (int k = 0; k < N; k++)
+            {
 
-            var AO = O - A;
+                for (int i = 0; i < p.Length; i++)
+                {
+                    p[i] = rs.GenPoint();
+                    //Console.WriteLine($"{p[i]} {p[i].N2()}");
+                }
 
-
-
+                // Centre dans tetrahedre (A, B, C, D) ?
+                var b = RandomSphere.isCenterInTetrahedre(p);
+                if (b)
+                    nbIn++;
+            }
+            Console.WriteLine($"{nbIn} {N} {(double)nbIn/N}");
         }
     }
 }
